@@ -15,12 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from api.views import index, login 
+from api.views import index, login, register, dispositivo
+from . import views
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
     path('index',index.as_view(),name='index'),
     path('login',login.as_view(),name='login'),
-
-
+    path('register',register.as_view(),name='register'),
+    path('exportar-dispositivo-csv/', views.exportar_dispositivo_csv, name='exportar_dispositivo_csv'),
 ]
+
