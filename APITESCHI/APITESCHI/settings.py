@@ -135,3 +135,4 @@ EMAIL_USE_TLS = True
 EMAIL_USE_USER = 'ricardomendietajr222@gmail.com'
 EMAIL_HOST_PASSWORD = 'rcwm iwqz cvhs nbvm'
 
+

@@ -1,0 +1,13 @@
+<html>
+<head>
+    <title>Mi Formulario</title>
+</head>
+<body>
+    <h2>Mi Formulario</h2>
+    <form method="post" action="{% url 'mi_vista' %}">
+        {% csrf_token %}
+        {{ formulario.as_p }}
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

@@ -2,7 +2,8 @@ from django.shortcuts import render
 from rest_framework.views import APIView 
 from django.http import HttpResponse
 import csv
-from .models import dispositivo 
+from django.shortcuts import render
+from .forms import MiFormulario
 from django import forms
 # Create your views here.
 
@@ -33,3 +34,14 @@ def exportar_dispotivos_csv(request):
         writer.writerow([dispositivo.Nombre_del_dispositivo , dispositivo.Quien_lo_realiza, dispositivo.descripcion])
 
     return response
+def mi_vista(request):
+    if request.method == 'POST':
+        formulario = MiFormulario(request.POST)
+        if formulario.is_valid():
+            # Realizar acciones con los datos del formulario
+            # Por ejemplo, guardar en la base de datos
+            pass
+    else:
+        formulario = MiFormulario()
+
+    return render(request, 'mi_aplicacion/mi_template.html', {'formulario': formulario})
