@@ -1,10 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from rest_framework.views import APIView 
 from django.http import HttpResponse
 import csv
 from django.shortcuts import render
-from .forms import MiFormulario
 from django import forms
+from django.core.mail import EmailMassage
+from .forms import FormularioContacto
 # Create your views here.
 
 class index (APIView):
