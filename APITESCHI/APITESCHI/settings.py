@@ -133,6 +133,6 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True 
 EMAIL_USE_USER = 'ricardomendietajr222@gmail.com'
-EMAIL_HOST_PASSWORD = 'rcwm iwqz cvhs nbvm'
+EMAIL_HOST_PASSWORD = 'gvqs sbva purv edch'
 
 

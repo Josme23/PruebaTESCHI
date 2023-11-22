@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from api.views import index, login, register, mi_vista
 from django.urls import path, include
+from . import views 
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
@@ -25,6 +26,8 @@ urlpatterns = [
     path('register',register.as_view(),name='register'),
     path('mi_vista/', mi_vista, name='mi_vista'),
     path('admin/', admin.site.urls),
-    path('mi_aplicacion/', include('mi_aplicacion.urls')),
+    path("mail/",views.correo,name="mail"),
+    #path("", views.index,name='index')
+    #path('mi_aplicacion/', include('mi_aplicacion.urls')),
 ]
 
