@@ -15,4 +15,7 @@ class Detalles (models.Model):
     Estado_antes_de = models.CharField(max_length=100)
     Estado_actual = models.CharField(max_length=100)
 
+class Manteniumientos (models.Model):
+    Ultimo_mantenimiento = models.CharField(max_length=100)
+    Proximo_mantenimiento  = models.CharField(max_length=100)
             

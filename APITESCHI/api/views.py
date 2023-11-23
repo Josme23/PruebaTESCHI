@@ -1,12 +1,12 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render , redirect
+from django.core.mail import EmailMassage
 from rest_framework.views import APIView 
 from django.http import HttpResponse
 import csv
 from django.shortcuts import render
 from django import forms
-from django.core.mail import EmailMassage
 from .forms import FormularioContacto
-# Create your views here.
+#Create your views here.
 
 class index (APIView):
     template_name="index.html"
